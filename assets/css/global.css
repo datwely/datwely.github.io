@@ -1,0 +1,31 @@
+:root {
+    /*Colors*/
+    --colors-bg-main: #4d4d4d;
+
+
+    /*Font Colors*/
+    --font-colors-main: #cc00cc;
+}
+
+* {
+    background: var(--colors-bg-main);
+    color:var(--font-colors-main);
+}
+
+body {
+    display: flex;
+    justify-content: center; /* horizontal center */
+    align-items: center; /* vertical center */
+    min-height: 100vh;
+    flex: 1;
+    flex-direction: column;
+}
+
+footer {
+    justify-content: normal;
+    text-align: left;
+    padding: 15px;
+    background: var(--colors-bg-main);
+    background-color: var(--colors-bg-main);
+    color: var(--font-colors-main);
+}
