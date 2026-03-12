@@ -25,7 +25,7 @@ footer {
     justify-content: normal;
     text-align: left;
     padding: 15px;
-    background: var(--colors-bg-main);
-    background-color: var(--colors-bg-main);
-    color: var(--font-colors-main);
+    /*background: var(--colors-bg-main);
+    background-color: var(--colors-bg-main); 
+    color: var(--font-colors-main); */
 }
