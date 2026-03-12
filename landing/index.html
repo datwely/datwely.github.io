@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-
+    <div class="scanlines"></div>
+    
     <head>
         <title>Very Wely Media</title>
         <link rel="stylesheet" href="../assets/css/global.css" />
@@ -11,13 +12,30 @@
 
     <body>
 
-        <header></header> <!--Put logo here sdiuakhg-->
+       <header>
+
+            <h1 class="glitch" data-text="VERY WELY MEDIA">
+            VERY WELY MEDIA
+            </h1>
+
+        </header>
+        
         <div class="something">
+
         <section class="left-side">
             
+            <div class="slideshow-box">
 
+                <h3>Favorite Tracks</h3>
+
+            <a id="songLink" href="#" target="_blank">
+                <img id="slideImg" src="../assets/images/slides/TheSpaceWeCreated.jpg">
+            </a>
+
+    </div>
 
         </section>
+
 
         <section class="main">
 
@@ -30,16 +48,22 @@
 
         </section>
 
+
         <section class="sidebar">
 
-            <p>l</p>
+        <div class="clock-box">
+
+            <h3>Local Time</h3>
+            <p id="clock">loading...</p>
+
+        </div>
 
         </section>
         </div>
         <footer>
 
 
-            <image: src="E:\media_website\assets\images\logos"></image:>
+           <!-- <image: src="E:\media_website\assets\images\logos"></image:> add logo here to replace the boring copyright -->
 
            <p>
                 © 2026 Wesley Chu
@@ -47,6 +71,59 @@
 
         </footer>
 
+
+        <script>
+
+        function updateClock() {
+            const now = new Date();
+            document.getElementById("clock").innerText =
+            now.toLocaleString();
+}
+
+setInterval(updateClock,1000);
+
+        </script>
+
+
+        <script>
+
+            const slides = [
+
+            {
+            img:"../assets/images/slides/TheSpaceWeCreated.jpg",
+                link:"https://www.youtube.com/watch?v=_9JH_iPUZb0"
+            },
+
+            {
+            img:"../assets/images/slides/SublimeSanteria.jpg",
+            link:"https://www.youtube.com/watch?v=k3ZeUL4fRyk"
+            },
+
+            {
+            img:"../assets/images/slides/WatchMeFly.jpg",
+            link:"https://www.youtube.com/watch?v=Qq89_E-gchw"
+            }
+
+];
+
+    let currentSlide = 0;
+
+    function changeSlide(){
+
+    currentSlide++;
+
+    if(currentSlide >= slides.length){
+    currentSlide = 0;
+    }
+
+    document.getElementById("slideImg").src = slides[currentSlide].img;
+    document.getElementById("songLink").href = slides[currentSlide].link;
+
+}
+
+setInterval(changeSlide,4000);
+
+</script>
         <!--put js under here :3-->
 
     </body>
