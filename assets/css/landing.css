@@ -39,7 +39,7 @@ header {
 }
 
 .glitch::before { animation: glitch1 2s infinite; color: #ff00ff; }
-.glitch::after { animation: glitch2 2s infinite; color: #00ffff; }
+.glitch::after { animation: glitch2 2s infinite; color: #800080; }
 
 @keyframes glitch1 {
     0% { left:0 } 20% { left:-2px } 40% { left:2px }
@@ -76,7 +76,7 @@ header {
     content:"";
     position:absolute;
     top:6px; left:6px; right:6px; bottom:6px;
-    border:1px solid #00ffff;
+    border:1px solid #800080;
     pointer-events:none;
 }
 
